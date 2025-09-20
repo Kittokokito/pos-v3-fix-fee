@@ -1,4 +1,4 @@
-/* style.css (v9.0 - Extra Large Text & Image Update) */
+/* style.css (v10.0 - Focused Menu Size Increase) */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap');
 
 :root {
@@ -18,7 +18,6 @@ body {
     padding-bottom: 150px; /* เพิ่ม padding สำหรับ footer ที่ใหญ่ขึ้น */
     -webkit-tap-highlight-color: transparent;
     color: var(--text-color);
-    /* **แก้ไข:** เพิ่มขนาดฟอนต์พื้นฐานให้ใหญ่ขึ้นมาก */
     font-size: 20px; 
 }
 .container {
@@ -32,11 +31,10 @@ header {
     color: var(--text-color);
     background-color: var(--surface-color);
 }
-/* **แก้ไข:** เพิ่มขนาดโลโก้และหัวข้อใหญ่มาก */
 header .logo { font-size: 6rem; line-height: 1; margin-bottom: 1rem; }
 header h1 { margin: 0; font-size: 3.5rem; }
 header p { margin: 0.5rem 0 0; color: var(--secondary-color); font-size: 1.5rem; }
-.brand-logo { margin-top: 1.5rem; max-height: 90px; } /* เพิ่มขนาด */
+.brand-logo { margin-top: 1.5rem; max-height: 90px; }
 .shop-phone { margin-top: 1rem; font-weight: 500; color: var(--primary-color); font-size: 1.8rem; }
 
 .form-section {
@@ -47,7 +45,6 @@ header p { margin: 0.5rem 0 0; color: var(--secondary-color); font-size: 1.5rem;
      padding-top: 2rem;
 }
 
-/* **แก้ไข:** เพิ่มขนาดหัวข้อฟอร์ม */
 .form-section h2 {
     font-size: 2.2rem; 
     margin: 2rem 0 2rem 0; 
@@ -69,7 +66,7 @@ input[type="text"]:focus, input[type="tel"]:focus {
 #get-location-btn { 
     width: auto; padding: 1rem 2rem; background-color: var(--surface-color); 
     color: var(--secondary-color); border: 1px solid var(--border-color); margin-bottom: 1rem; 
-    font-weight: 500; cursor: pointer; border-radius: 8px; font-size: 1.4rem; /* เพิ่มขนาด */
+    font-weight: 500; cursor: pointer; border-radius: 8px; font-size: 1.4rem;
 }
 #location-status { color: var(--secondary-color); font-size: 1.2rem; }
 
@@ -89,10 +86,10 @@ input[type="text"]:focus, input[type="tel"]:focus {
     align-items: flex-start;
     border: 1px solid var(--border-color);
 }
-/* **แก้ไข:** ขยายขนาดรูปภาพเมนูเป็น 150px */
+/* **แก้ไข:** ขยายขนาดรูปภาพเมนูเป็น 200px */
 .menu-item-dynamic img {
-    width: 150px; height: 150px; 
-    border-radius: 8px; margin-right: 1.5rem;
+    width: 200px; height: 200px; 
+    border-radius: 8px; margin-right: 2rem; /* เพิ่มระยะห่าง */
     object-fit: cover; background-color: #f0f0f0; flex-shrink: 0;
 }
 .menu-item-details {
@@ -100,9 +97,9 @@ input[type="text"]:focus, input[type="tel"]:focus {
     display: flex;
     flex-direction: column;
 }
-/* **แก้ไข:** เพิ่มขนาดตัวอักษรชื่อเมนูและราคา */
-.item-name { display: block; font-weight: 700; font-size: 2rem; }
-.item-price { color: var(--primary-color); font-weight: 500; margin-bottom: 1rem; font-size: 1.8rem; }
+/* **แก้ไข:** เพิ่มขนาดตัวอักษรชื่อเมนูและราคา 200% */
+.item-name { display: block; font-weight: 700; font-size: 4rem; }
+.item-price { color: var(--primary-color); font-weight: 500; margin-bottom: 1.5rem; font-size: 3.6rem; }
 .special-request-input {
     width: 100%; padding: 0.8rem; box-sizing: border-box; border: 1px solid var(--border-color);
     border-radius: 6px; font-size: 1.2rem; font-family: 'Kanit', sans-serif;
@@ -114,10 +111,10 @@ input[type="text"]:focus, input[type="tel"]:focus {
     margin-left: 1.5rem;
 }
 .quantity-controls button {
-    width: 50px; height: 50px; /* เพิ่มขนาด */
+    width: 50px; height: 50px;
     border-radius: 50%;
     background-color: var(--primary-color); color: white;
-    font-size: 3rem; /* เพิ่มขนาด */
+    font-size: 3rem;
     line-height: 1; padding: 0;
     display: flex; align-items: center; justify-content: center;
     border: none; cursor: pointer;
@@ -128,26 +125,27 @@ input[type="text"]:focus, input[type="tel"]:focus {
     border: 1px solid var(--primary-color);
 }
 .quantity-display {
-    font-size: 2rem; /* เพิ่มขนาด */
+    font-size: 2rem;
     font-weight: 700; min-width: 40px; text-align: center;
 }
 
 /* --- Sub-options --- */
 .sub-options-container {
-    display: flex; flex-wrap: wrap; gap: 1rem;
+    display: flex; flex-wrap: wrap; gap: 1.5rem; /* เพิ่มระยะห่าง */
     margin-top: 1rem; 
 }
 .sub-options-container input[type="radio"] { display: none; }
 .sub-options-container input[type="radio"]:checked + span {
     background-color: var(--primary-color); color: white; border-color: var(--primary-color);
 }
+/* **แก้ไข:** เพิ่มขนาดตัวอักษร option 200% */
 .sub-options-container span {
     display: inline-flex; align-items: center; justify-content: center;
     white-space: nowrap; 
-    padding: 0.6rem 1.2rem; /* เพิ่มขนาด */
+    padding: 0.8rem 1.5rem; /* เพิ่มขนาด */
     border: 1px solid var(--border-color);
     border-radius: 15px; 
-    font-size: 1.2rem; /* เพิ่มขนาด */
+    font-size: 2.4rem; 
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
@@ -164,9 +162,9 @@ input[type="text"]:focus, input[type="tel"]:focus {
     justify-content: space-between;
     border-top: 1px solid var(--border-color);
 }
-.summary-details { color: var(--secondary-color); font-size: 1.5rem; } /* เพิ่มขนาด */
+.summary-details { color: var(--secondary-color); font-size: 1.5rem; }
 .summary-details .grand-total {
-    font-weight: 700; font-size: 1.8rem; color: var(--text-color); /* เพิ่มขนาด */
+    font-weight: 700; font-size: 1.8rem; color: var(--text-color);
 }
 #review-order-btn {
     width: auto;
@@ -177,7 +175,7 @@ input[type="text"]:focus, input[type="tel"]:focus {
     border-radius: 8px;
     font-weight: 700;
     cursor: pointer;
-    font-size: 1.5rem; /* เพิ่มขนาด */
+    font-size: 1.5rem;
 }
 #review-order-btn:disabled {
     background-color: #A0AEC0; cursor: not-allowed;
