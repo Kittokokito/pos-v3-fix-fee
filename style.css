@@ -1,4 +1,4 @@
-/* style.css (v11.0 - Responsive Viewport Units) */
+/* style.css (v12.0 - Mobile-Specific Size Adjustments) */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap');
 
 :root {
@@ -45,18 +45,19 @@ header p { margin: 0.5rem 0 0; color: var(--secondary-color); font-size: 1.5rem;
      padding-top: 2rem;
 }
 
+/* **แก้ไข:** ลดขนาดส่วนรายละเอียดการส่งลง 80% */
 .form-section h2 {
-    font-size: 2.2rem; 
+    font-size: 1.8rem; 
     margin: 2rem 0 2rem 0; 
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 1rem; 
     color: var(--text-color);
 }
-.form-group { margin-bottom: 2rem; }
-label { display: block; margin-bottom: 1rem; font-weight: 500; color: var(--secondary-color); font-size: 1.5rem; }
+.form-group { margin-bottom: 1.5rem; }
+label { display: block; margin-bottom: 0.8rem; font-weight: 500; color: var(--secondary-color); font-size: 1.2rem; }
 input[type="text"], input[type="tel"] {
-    width: 100%; padding: 1rem; box-sizing: border-box; border: 1px solid var(--border-color);
-    border-radius: 8px; font-size: 1.5rem; font-family: 'Kanit', sans-serif;
+    width: 100%; padding: 0.8rem; box-sizing: border-box; border: 1px solid var(--border-color);
+    border-radius: 8px; font-size: 1.2rem; font-family: 'Kanit', sans-serif;
 }
 input[type="text"]:focus, input[type="tel"]:focus {
     outline: none; border-color: var(--primary-color);
@@ -64,11 +65,11 @@ input[type="text"]:focus, input[type="tel"]:focus {
 }
 .location-group { text-align: center; padding-bottom: 2rem;}
 #get-location-btn { 
-    width: auto; padding: 1rem 2rem; background-color: var(--surface-color); 
+    width: auto; padding: 0.8rem 1.6rem; background-color: var(--surface-color); 
     color: var(--secondary-color); border: 1px solid var(--border-color); margin-bottom: 1rem; 
-    font-weight: 500; cursor: pointer; border-radius: 8px; font-size: 1.4rem;
+    font-weight: 500; cursor: pointer; border-radius: 8px; font-size: 1.1rem;
 }
-#location-status { color: var(--secondary-color); font-size: 1.2rem; }
+#location-status { color: var(--secondary-color); font-size: 1rem; }
 
 /* --- Menu --- */
 #menu-container {
@@ -86,10 +87,10 @@ input[type="text"]:focus, input[type="tel"]:focus {
     align-items: flex-start;
     border: 1px solid var(--border-color);
 }
-/* **แก้ไข:** ใช้หน่วย vw และ clamp() เพื่อให้รูปภาพปรับขนาดตามหน้าจอ */
+/* **แก้ไข:** เพิ่มขนาดรูปภาพบนมือถือ 150% */
 .menu-item-dynamic img {
-    width: clamp(150px, 40vw, 200px);
-    height: clamp(150px, 40vw, 200px);
+    width: clamp(200px, 50vw, 250px);
+    height: clamp(200px, 50vw, 250px);
     border-radius: 8px; margin-right: 2rem;
     object-fit: cover; background-color: #f0f0f0; flex-shrink: 0;
 }
@@ -98,17 +99,18 @@ input[type="text"]:focus, input[type="tel"]:focus {
     display: flex;
     flex-direction: column;
 }
-/* **แก้ไข:** ใช้หน่วย vw และ clamp() เพื่อให้ตัวอักษรปรับขนาดตามหน้าจอ */
+/* **แก้ไข:** เพิ่มขนาดตัวอักษรชื่ออาหารบนมือถือ 200% */
 .item-name { 
     display: block; 
     font-weight: 700; 
-    font-size: clamp(2.5rem, 10vw, 4rem); 
+    font-size: clamp(3rem, 13vw, 5rem); 
 }
+/* **แก้ไข:** เพิ่มขนาดตัวอักษรราคาบนมือถือ 200% */
 .item-price { 
     color: var(--primary-color); 
     font-weight: 500; 
     margin-bottom: 1.5rem; 
-    font-size: clamp(2rem, 9vw, 3.6rem); 
+    font-size: clamp(2.5rem, 12vw, 4.5rem); 
 }
 .special-request-input {
     width: 100%; padding: 0.8rem; box-sizing: border-box; border: 1px solid var(--border-color);
@@ -148,14 +150,14 @@ input[type="text"]:focus, input[type="tel"]:focus {
 .sub-options-container input[type="radio"]:checked + span {
     background-color: var(--primary-color); color: white; border-color: var(--primary-color);
 }
-/* **แก้ไข:** ใช้หน่วย vw และ clamp() เพื่อให้ตัวอักษรปรับขนาดตามหน้าจอ */
+/* **แก้ไข:** เพิ่มขนาดตัวอักษร option บนมือถือ 200% */
 .sub-options-container span {
     display: inline-flex; align-items: center; justify-content: center;
     white-space: nowrap; 
     padding: 0.8rem 1.5rem;
     border: 1px solid var(--border-color);
     border-radius: 15px; 
-    font-size: clamp(1.5rem, 6vw, 2.4rem); 
+    font-size: clamp(2rem, 8vw, 3rem); 
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
@@ -239,7 +241,7 @@ input[type="text"]:focus, input[type="tel"]:focus {
 .thank-you-content { text-align: center; }
 .payment-instructions {
     background-color: #f0fff4;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1.5rem;
     margin: 1.5rem 0;
