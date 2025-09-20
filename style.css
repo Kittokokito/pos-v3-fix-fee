@@ -119,16 +119,27 @@ input[type="text"]:focus, input[type="tel"]:focus {
 
 /* --- Sub-options --- */
 .sub-options-container {
-    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    display: flex; 
+    flex-wrap: wrap; /* ให้ปุ่มตัวเลือกขึ้นบรรทัดใหม่เมื่อไม่พอ */
+    gap: 0.5rem;
+    margin-top: 0.5rem; /* เพิ่มระยะห่างจากราคา */
 }
 .sub-options-container input[type="radio"] { display: none; }
 .sub-options-container input[type="radio"]:checked + span {
     background-color: var(--primary-color); color: white; border-color: var(--primary-color);
 }
 .sub-options-container span {
-     display: block; padding: 0.3rem 0.75rem; border: 1px solid var(--border-color);
-     border-radius: 15px; font-size: 0.85rem; cursor: pointer;
-     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    /* **แก้ไข:** เปลี่ยนจาก display: block เป็น inline-flex เพื่อให้เรียงแนวนอน */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* ป้องกันข้อความในปุ่มตกบรรทัด */
+    padding: 0.3rem 0.75rem; 
+    border: 1px solid var(--border-color);
+    border-radius: 15px; 
+    font-size: 0.85rem; 
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 /* --- Floating Footer --- */
@@ -221,3 +232,4 @@ input[type="text"]:focus, input[type="tel"]:focus {
     font-size: 1.5rem;
     font-weight: 700;
 }
+
