@@ -1,4 +1,4 @@
-/* style.css (v6.0 - Larger Font & Image Update) */
+/* style.css (v9.0 - Extra Large Text & Image Update) */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap');
 
 :root {
@@ -15,11 +15,11 @@ body {
     font-family: 'Kanit', sans-serif;
     background-color: var(--background-color);
     margin: 0;
-    padding-bottom: 120px; 
+    padding-bottom: 150px; /* เพิ่ม padding สำหรับ footer ที่ใหญ่ขึ้น */
     -webkit-tap-highlight-color: transparent;
     color: var(--text-color);
-    /* **แก้ไข:** กำหนดขนาดตัวอักษรพื้นฐานให้ชัดเจน */
-    font-size: 16px; 
+    /* **แก้ไข:** เพิ่มขนาดฟอนต์พื้นฐานให้ใหญ่ขึ้นมาก */
+    font-size: 20px; 
 }
 .container {
     width: 100%;
@@ -28,71 +28,71 @@ body {
 }
 header { 
     text-align: center; 
-    padding: 2rem 1rem;
+    padding: 2.5rem 1.5rem;
     color: var(--text-color);
     background-color: var(--surface-color);
 }
-/* **แก้ไข:** เพิ่มขนาดโลโก้และหัวข้อ */
-header .logo { font-size: 4.5rem; line-height: 1; margin-bottom: 0.5rem; }
-header h1 { margin: 0; font-size: 2.2rem; }
-header p { margin: 0.25rem 0 0; color: var(--secondary-color); font-size: 1rem; }
-.brand-logo { margin-top: 1rem; max-height: 70px; } /* เพิ่มขนาด */
-.shop-phone { margin-top: 0.75rem; font-weight: 500; color: var(--primary-color); font-size: 1.1rem; }
+/* **แก้ไข:** เพิ่มขนาดโลโก้และหัวข้อใหญ่มาก */
+header .logo { font-size: 6rem; line-height: 1; margin-bottom: 1rem; }
+header h1 { margin: 0; font-size: 3.5rem; }
+header p { margin: 0.5rem 0 0; color: var(--secondary-color); font-size: 1.5rem; }
+.brand-logo { margin-top: 1.5rem; max-height: 90px; } /* เพิ่มขนาด */
+.shop-phone { margin-top: 1rem; font-weight: 500; color: var(--primary-color); font-size: 1.8rem; }
 
 .form-section {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     background-color: var(--surface-color);
 }
 .form-section:first-of-type {
-     padding-top: 1.5rem;
+     padding-top: 2rem;
 }
 
 /* **แก้ไข:** เพิ่มขนาดหัวข้อฟอร์ม */
 .form-section h2 {
-    font-size: 1.4rem; 
-    margin: 1.5rem 0 1.5rem 0; 
+    font-size: 2.2rem; 
+    margin: 2rem 0 2rem 0; 
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.75rem; 
+    padding-bottom: 1rem; 
     color: var(--text-color);
 }
-.form-group { margin-bottom: 1.25rem; }
-label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--secondary-color); font-size: 1rem; }
+.form-group { margin-bottom: 2rem; }
+label { display: block; margin-bottom: 1rem; font-weight: 500; color: var(--secondary-color); font-size: 1.5rem; }
 input[type="text"], input[type="tel"] {
-    width: 100%; padding: 0.8rem; box-sizing: border-box; border: 1px solid var(--border-color);
-    border-radius: 8px; font-size: 1rem; font-family: 'Kanit', sans-serif;
+    width: 100%; padding: 1rem; box-sizing: border-box; border: 1px solid var(--border-color);
+    border-radius: 8px; font-size: 1.5rem; font-family: 'Kanit', sans-serif;
 }
 input[type="text"]:focus, input[type="tel"]:focus {
     outline: none; border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(47, 133, 90, 0.2);
 }
-.location-group { text-align: center; padding-bottom: 1.5rem;}
+.location-group { text-align: center; padding-bottom: 2rem;}
 #get-location-btn { 
-    width: auto; padding: 0.8rem 1.5rem; background-color: var(--surface-color); 
-    color: var(--secondary-color); border: 1px solid var(--border-color); margin-bottom: 0.5rem; 
-    font-weight: 500; cursor: pointer; border-radius: 8px; font-size: 1rem; /* เพิ่มขนาด */
+    width: auto; padding: 1rem 2rem; background-color: var(--surface-color); 
+    color: var(--secondary-color); border: 1px solid var(--border-color); margin-bottom: 1rem; 
+    font-weight: 500; cursor: pointer; border-radius: 8px; font-size: 1.4rem; /* เพิ่มขนาด */
 }
-#location-status { color: var(--secondary-color); font-size: 0.9rem; }
+#location-status { color: var(--secondary-color); font-size: 1.2rem; }
 
 /* --- Menu --- */
 #menu-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding-bottom: 1rem;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
 }
 .menu-item-dynamic {
     display: flex;
     background: var(--surface-color);
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
-    padding: 1rem;
+    padding: 1.5rem;
     align-items: flex-start;
     border: 1px solid var(--border-color);
 }
-/* **แก้ไข:** ขยายขนาดรูปภาพเมนูใหญ่ขึ้นมาก */
+/* **แก้ไข:** ขยายขนาดรูปภาพเมนูเป็น 150px */
 .menu-item-dynamic img {
-    width: 100px; height: 100px; 
-    border-radius: 8px; margin-right: 1rem;
+    width: 150px; height: 150px; 
+    border-radius: 8px; margin-right: 1.5rem;
     object-fit: cover; background-color: #f0f0f0; flex-shrink: 0;
 }
 .menu-item-details {
@@ -101,23 +101,23 @@ input[type="text"]:focus, input[type="tel"]:focus {
     flex-direction: column;
 }
 /* **แก้ไข:** เพิ่มขนาดตัวอักษรชื่อเมนูและราคา */
-.item-name { display: block; font-weight: 700; font-size: 1.2rem; }
-.item-price { color: var(--primary-color); font-weight: 500; margin-bottom: 0.5rem; font-size: 1.1rem; }
+.item-name { display: block; font-weight: 700; font-size: 2rem; }
+.item-price { color: var(--primary-color); font-weight: 500; margin-bottom: 1rem; font-size: 1.8rem; }
 .special-request-input {
-    width: 100%; padding: 0.5rem; box-sizing: border-box; border: 1px solid var(--border-color);
-    border-radius: 6px; font-size: 0.9rem; font-family: 'Kanit', sans-serif;
-    margin-top: 0.75rem;
+    width: 100%; padding: 0.8rem; box-sizing: border-box; border: 1px solid var(--border-color);
+    border-radius: 6px; font-size: 1.2rem; font-family: 'Kanit', sans-serif;
+    margin-top: 1rem;
 }
 /* --- Quantity Controls (+/- buttons) --- */
 .quantity-controls {
-    display: flex; align-items: center; gap: 0.75rem;
-    margin-left: 1rem;
+    display: flex; align-items: center; gap: 1rem;
+    margin-left: 1.5rem;
 }
 .quantity-controls button {
-    width: 38px; height: 38px; /* เพิ่มขนาด */
+    width: 50px; height: 50px; /* เพิ่มขนาด */
     border-radius: 50%;
     background-color: var(--primary-color); color: white;
-    font-size: 2rem; /* เพิ่มขนาด */
+    font-size: 3rem; /* เพิ่มขนาด */
     line-height: 1; padding: 0;
     display: flex; align-items: center; justify-content: center;
     border: none; cursor: pointer;
@@ -128,14 +128,14 @@ input[type="text"]:focus, input[type="tel"]:focus {
     border: 1px solid var(--primary-color);
 }
 .quantity-display {
-    font-size: 1.3rem; /* เพิ่มขนาด */
-    font-weight: 700; min-width: 25px; text-align: center;
+    font-size: 2rem; /* เพิ่มขนาด */
+    font-weight: 700; min-width: 40px; text-align: center;
 }
 
 /* --- Sub-options --- */
 .sub-options-container {
-    display: flex; flex-wrap: wrap; gap: 0.5rem;
-    margin-top: 0.5rem; 
+    display: flex; flex-wrap: wrap; gap: 1rem;
+    margin-top: 1rem; 
 }
 .sub-options-container input[type="radio"] { display: none; }
 .sub-options-container input[type="radio"]:checked + span {
@@ -144,10 +144,10 @@ input[type="text"]:focus, input[type="tel"]:focus {
 .sub-options-container span {
     display: inline-flex; align-items: center; justify-content: center;
     white-space: nowrap; 
-    padding: 0.4rem 0.8rem; /* เพิ่มขนาด */
+    padding: 0.6rem 1.2rem; /* เพิ่มขนาด */
     border: 1px solid var(--border-color);
     border-radius: 15px; 
-    font-size: 0.9rem; /* เพิ่มขนาด */
+    font-size: 1.2rem; /* เพิ่มขนาด */
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
@@ -157,27 +157,27 @@ input[type="text"]:focus, input[type="tel"]:focus {
     position: fixed;
     bottom: 0; left: 0; right: 0;
     background-color: var(--surface-color);
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid var(--border-color);
 }
-.summary-details { color: var(--secondary-color); font-size: 1rem; } /* เพิ่มขนาด */
+.summary-details { color: var(--secondary-color); font-size: 1.5rem; } /* เพิ่มขนาด */
 .summary-details .grand-total {
-    font-weight: 700; font-size: 1.2rem; color: var(--text-color); /* เพิ่มขนาด */
+    font-weight: 700; font-size: 1.8rem; color: var(--text-color); /* เพิ่มขนาด */
 }
 #review-order-btn {
     width: auto;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem;
     background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 8px;
     font-weight: 700;
     cursor: pointer;
-    font-size: 1.1rem; /* เพิ่มขนาด */
+    font-size: 1.5rem; /* เพิ่มขนาด */
 }
 #review-order-btn:disabled {
     background-color: #A0AEC0; cursor: not-allowed;
@@ -198,31 +198,31 @@ input[type="text"]:focus, input[type="tel"]:focus {
     box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
 }
 .modal-content h2, .modal-content h3 { margin-top: 0; color: var(--text-color); }
-.modal-content h2 { font-size: 1.5rem; }
-.modal-content h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--secondary-color); }
-#customer-summary div { margin-bottom: 0.25rem; font-size: 1rem; }
+.modal-content h2 { font-size: 2rem; }
+.modal-content h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--secondary-color); }
+#customer-summary div { margin-bottom: 0.25rem; font-size: 1.2rem; }
 .modal-buttons { display: flex; gap: 1rem; margin-top: 1.5rem; }
 .modal-buttons button {
-    flex-grow: 1; padding: 0.8rem; font-size: 1rem; border-radius: 8px;
+    flex-grow: 1; padding: 1rem; font-size: 1.2rem; border-radius: 8px;
     font-family: 'Kanit', sans-serif; font-weight: 500; cursor: pointer;
 }
 #edit-order-btn, #close-thank-you-btn { background-color: #6c757d; color: white; border: none; }
 #confirm-order-btn { background-color: var(--primary-color); color: white; border: none; }
 #confirm-order-btn:disabled { background-color: #A0AEC0; cursor: not-allowed; }
-#order-summary-list .item-line { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 1rem;}
-#cost-summary { margin-top: 1rem; border-top: 1px dashed var(--border-color); padding-top: 1rem; font-size: 1rem;}
+#order-summary-list .item-line { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 1.2rem;}
+#cost-summary { margin-top: 1rem; border-top: 1px dashed var(--border-color); padding-top: 1rem; font-size: 1.2rem;}
 #cost-summary .cost-item { display: flex; justify-content: space-between; margin: 0.5rem 0;}
 #grand-total-modal { 
     display: flex; justify-content: space-between;
-    font-weight: bold; font-size: 1.3rem; color: var(--text-color);
-    border-top: 1px solid #ccc; padding-top: 0.75rem; margin-top: 0.75rem;
+    font-weight: bold; font-size: 1.8rem; color: var(--text-color);
+    border-top: 1px solid #ccc; padding-top: 1rem; margin-top: 1rem;
 }
 
 /* Spinner for loading fee */
 .spinner-container { text-align: center; padding: 2rem; }
 .spinner {
     border: 4px solid #f3f3f3; border-top: 4px solid var(--primary-color);
-    border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;
+    border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite;
     margin: 0 auto 1rem auto;
 }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
@@ -233,14 +233,14 @@ input[type="text"]:focus, input[type="tel"]:focus {
     background-color: #f0fff4;
     border: 1px solid var(--primary-color);
     border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem 0;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .payment-instructions .highlight {
     color: var(--highlight-color);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
