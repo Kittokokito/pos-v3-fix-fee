@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้าน ป.ขาหมู</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🐷</div>
+            <h1>ร้าน ป.ขาหมู</h1>
+            <p>สั่งอาหารเดลิเวอรี่ ราคาเท่าหน้าร้าน ค่าส่งตามจริง</p>
+            <img src="https://drive.google.com/uc?export=view&id=18SWBkmI6labwU_TtzgmytZAVr1BrhdGc" alt="โลโก้ร้าน ป.ขาหมู" class="brand-logo">
+            <div class="shop-phone">โทร: 086-262-4788</div>
+        </header>
+
+        <form id="order-form">
+            <div class="form-section">
+                <h2>รายละเอียดการจัดส่ง</h2>
+                <div class="form-group">
+                    <label for="customer-name">ชื่อเล่น ๆ:</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">เบอร์โทรติดต่อ:</label>
+                    <input type="tel" id="customer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">ที่อยู่จัดส่ง:</label>
+                    <input type="text" id="customer-address" placeholder="เช่น ร้านเสริมสวยข้าง 7-11, ตึก..." required>
+                </div>
+                 <div class="location-group">
+                    <button type="button" id="get-location-btn">📍 ขอตำแหน่งปัจจุบัน (สำหรับคำนวณค่าส่ง)</button>
+                    <small id="location-status">ยังไม่ได้ระบุตำแหน่ง</small>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>เลือกเมนูอาหาร</h2>
+                <div id="menu-container">
+                    <p id="loading-menu">กำลังโหลดเมนูอาหาร...</p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Floating Footer for Summary and Order Button -->
+    <div class="order-summary-footer">
+        <div class="summary-details">
+            <div>ค่าอาหาร: <span id="total-price-value">0</span> บ.</div>
+            <div class="grand-total">รวม: <span id="grand-total-value">0</span> บ.</div>
+        </div>
+        <button type="button" id="review-order-btn" disabled>ดูรายการสั่งซื้อ</button>
+    </div>
+
+    <!-- Modal for Order Summary -->
+    <div id="summary-modal" class="modal">
+        <div class="modal-content">
+            <h2>ตรวจสอบรายการสั่งซื้อ</h2>
+            <h3>รายละเอียดการจัดส่ง</h3>
+            <div id="customer-summary"></div>
+            <hr>
+            <h3>รายการอาหาร</h3>
+            <div id="order-summary-list"></div>
+            <div id="cost-summary">
+                 <div class="cost-item">
+                    <span>ค่าอาหาร</span>
+                    <span id="summary-food-total"></span>
+                </div>
+                 <div class="cost-item">
+                    <span>ค่าส่ง (<span id="summary-distance"></span>)</span>
+                    <span id="summary-delivery-fee"></span>
+                </div>
+                <div id="grand-total-modal">
+                    <span>ยอดรวมทั้งสิ้น</span>
+                    <span id="summary-grand-total"></span>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button type="button" id="edit-order-btn">แก้ไข</button>
+                <button type="button" id="confirm-order-btn">ยืนยันการสั่งซื้อ</button>
+            </div>
+             <div id="modal-spinner" class="spinner-container" style="display: none;">
+                <div class="spinner"></div>
+                <p>กำลังคำนวณค่าส่ง...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for "Thank You" message -->
+    <div id="thank-you-modal" class="modal">
+        <div class="modal-content thank-you-content">
+            <h2>🙏 ขอบคุณสำหรับออเดอร์ครับ</h2>
+            <p>ทางร้านได้รับรายการสั่งซื้อของคุณเรียบร้อยแล้ว</p>
+            <hr>
+            <h3>การชำระเงินและรับอาหาร</h3>
+            <p class="payment-instructions">
+                ลูกค้ารับอาหารแล้วค่อยสแกนจ่ายจาก QR CODE ในถุงอาหาร
+                <br>
+                <strong class="highlight">**ไม่ต้อง**</strong>
+                จ่ายเงินให้ไรเดอร์
+                <br>
+                <small>(ทางร้านสำรองจ่ายค่ารถไปให้ก่อนแล้ว)</small>
+            </p>
+            <div class="modal-buttons">
+                <button type="button" id="close-thank-you-btn">ปิดหน้าต่างนี้</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
