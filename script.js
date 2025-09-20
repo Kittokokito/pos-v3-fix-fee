@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- การตั้งค่าที่สำคัญ ---
     // คุณต้องนำ URL ที่ได้จากการ Deploy Google Apps Script มาใส่ที่นี่
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyslVNNqlQ7cDwTiw1vYm7KAVmHoj-NlkhRI31HZPugTRQz5DLi6MMcCxiDf-z7ebMV/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzY6n8Sw-q74XqA7CarQlQHM6bMvWqvbQhRKLcOLmeGxJ2CN9oRdqRL23LOG9W75-TI/exec";
 
     // --- ตัวแปรสำหรับจัดการสถานะ (State) ---
     let currentOrder = {}; // เก็บรายการอาหารที่สั่ง { itemID: { quantity: X, ... }, ... }
