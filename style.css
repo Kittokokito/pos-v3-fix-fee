@@ -1,4 +1,4 @@
-/* style.css (v10.0 - Focused Menu Size Increase) */
+/* style.css (v11.0 - Responsive Viewport Units) */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap');
 
 :root {
@@ -86,10 +86,11 @@ input[type="text"]:focus, input[type="tel"]:focus {
     align-items: flex-start;
     border: 1px solid var(--border-color);
 }
-/* **แก้ไข:** ขยายขนาดรูปภาพเมนูเป็น 200px */
+/* **แก้ไข:** ใช้หน่วย vw และ clamp() เพื่อให้รูปภาพปรับขนาดตามหน้าจอ */
 .menu-item-dynamic img {
-    width: 200px; height: 200px; 
-    border-radius: 8px; margin-right: 2rem; /* เพิ่มระยะห่าง */
+    width: clamp(150px, 40vw, 200px);
+    height: clamp(150px, 40vw, 200px);
+    border-radius: 8px; margin-right: 2rem;
     object-fit: cover; background-color: #f0f0f0; flex-shrink: 0;
 }
 .menu-item-details {
@@ -97,9 +98,18 @@ input[type="text"]:focus, input[type="tel"]:focus {
     display: flex;
     flex-direction: column;
 }
-/* **แก้ไข:** เพิ่มขนาดตัวอักษรชื่อเมนูและราคา 200% */
-.item-name { display: block; font-weight: 700; font-size: 4rem; }
-.item-price { color: var(--primary-color); font-weight: 500; margin-bottom: 1.5rem; font-size: 3.6rem; }
+/* **แก้ไข:** ใช้หน่วย vw และ clamp() เพื่อให้ตัวอักษรปรับขนาดตามหน้าจอ */
+.item-name { 
+    display: block; 
+    font-weight: 700; 
+    font-size: clamp(2.5rem, 10vw, 4rem); 
+}
+.item-price { 
+    color: var(--primary-color); 
+    font-weight: 500; 
+    margin-bottom: 1.5rem; 
+    font-size: clamp(2rem, 9vw, 3.6rem); 
+}
 .special-request-input {
     width: 100%; padding: 0.8rem; box-sizing: border-box; border: 1px solid var(--border-color);
     border-radius: 6px; font-size: 1.2rem; font-family: 'Kanit', sans-serif;
@@ -138,14 +148,14 @@ input[type="text"]:focus, input[type="tel"]:focus {
 .sub-options-container input[type="radio"]:checked + span {
     background-color: var(--primary-color); color: white; border-color: var(--primary-color);
 }
-/* **แก้ไข:** เพิ่มขนาดตัวอักษร option 200% */
+/* **แก้ไข:** ใช้หน่วย vw และ clamp() เพื่อให้ตัวอักษรปรับขนาดตามหน้าจอ */
 .sub-options-container span {
     display: inline-flex; align-items: center; justify-content: center;
     white-space: nowrap; 
-    padding: 0.8rem 1.5rem; /* เพิ่มขนาด */
+    padding: 0.8rem 1.5rem;
     border: 1px solid var(--border-color);
     border-radius: 15px; 
-    font-size: 2.4rem; 
+    font-size: clamp(1.5rem, 6vw, 2.4rem); 
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
