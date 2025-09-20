@@ -1,11 +1,11 @@
-/* style.css (v6.0 - Larger Font & Image Update) */
+/* style.css (v7.0 - Centered Card Layout) */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap');
 
 :root {
     --primary-color: #2F855A;
     --secondary-color: #4A5568;
-    --background-color: #F7FAFC;
-    --surface-color: #FFFFFF;
+    --background-color: #F7FAFC; /* Light gray background */
+    --surface-color: #FFFFFF; /* Card Color */
     --text-color: #2D3748;
     --border-color: #E2E8F0;
     --highlight-color: #c53030;
@@ -13,41 +13,44 @@
 
 body {
     font-family: 'Kanit', sans-serif;
-    background-color: var(--background-color);
+    background-color: var(--background-color); /* Use light gray for the page background */
     margin: 0;
     padding-bottom: 120px; 
     -webkit-tap-highlight-color: transparent;
     color: var(--text-color);
-    /* **แก้ไข:** กำหนดขนาดตัวอักษรพื้นฐานให้ชัดเจน */
     font-size: 16px; 
 }
+
+/* **แก้ไข:** นำ layout แบบ card กลับมาใช้ แต่ให้ดูทันสมัย */
 .container {
     width: 100%;
-    margin: 0 auto;
+    max-width: 640px; /* กำหนดความกว้างสูงสุด */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลางแนวนอน */
     box-sizing: border-box;
+    background-color: var(--surface-color); /* ทำให้ container มีพื้นหลังสีขาว */
+    min-height: 100vh; /* ทำให้พื้นหลังสีขาวยาวเต็มหน้าจอแนวตั้ง */
+    box-shadow: 0 0 20px rgba(0,0,0,0.05); /* เพิ่มเงาจางๆ */
 }
+
 header { 
     text-align: center; 
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem; /* เพิ่ม padding ด้านข้างเล็กน้อย */
     color: var(--text-color);
     background-color: var(--surface-color);
 }
-/* **แก้ไข:** เพิ่มขนาดโลโก้และหัวข้อ */
 header .logo { font-size: 4.5rem; line-height: 1; margin-bottom: 0.5rem; }
 header h1 { margin: 0; font-size: 2.2rem; }
 header p { margin: 0.25rem 0 0; color: var(--secondary-color); font-size: 1rem; }
-.brand-logo { margin-top: 1rem; max-height: 70px; } /* เพิ่มขนาด */
+.brand-logo { margin-top: 1rem; max-height: 70px; }
 .shop-phone { margin-top: 0.75rem; font-weight: 500; color: var(--primary-color); font-size: 1.1rem; }
 
 .form-section {
-    padding: 0 1rem;
+    padding: 0 1.5rem; /* เพิ่ม padding ด้านข้างเล็กน้อย */
     background-color: var(--surface-color);
 }
 .form-section:first-of-type {
      padding-top: 1.5rem;
 }
-
-/* **แก้ไข:** เพิ่มขนาดหัวข้อฟอร์ม */
 .form-section h2 {
     font-size: 1.4rem; 
     margin: 1.5rem 0 1.5rem 0; 
@@ -69,7 +72,7 @@ input[type="text"]:focus, input[type="tel"]:focus {
 #get-location-btn { 
     width: auto; padding: 0.8rem 1.5rem; background-color: var(--surface-color); 
     color: var(--secondary-color); border: 1px solid var(--border-color); margin-bottom: 0.5rem; 
-    font-weight: 500; cursor: pointer; border-radius: 8px; font-size: 1rem; /* เพิ่มขนาด */
+    font-weight: 500; cursor: pointer; border-radius: 8px; font-size: 1rem;
 }
 #location-status { color: var(--secondary-color); font-size: 0.9rem; }
 
@@ -89,7 +92,6 @@ input[type="text"]:focus, input[type="tel"]:focus {
     align-items: flex-start;
     border: 1px solid var(--border-color);
 }
-/* **แก้ไข:** ขยายขนาดรูปภาพเมนูใหญ่ขึ้นมาก */
 .menu-item-dynamic img {
     width: 100px; height: 100px; 
     border-radius: 8px; margin-right: 1rem;
@@ -100,7 +102,6 @@ input[type="text"]:focus, input[type="tel"]:focus {
     display: flex;
     flex-direction: column;
 }
-/* **แก้ไข:** เพิ่มขนาดตัวอักษรชื่อเมนูและราคา */
 .item-name { display: block; font-weight: 700; font-size: 1.2rem; }
 .item-price { color: var(--primary-color); font-weight: 500; margin-bottom: 0.5rem; font-size: 1.1rem; }
 .special-request-input {
@@ -114,10 +115,10 @@ input[type="text"]:focus, input[type="tel"]:focus {
     margin-left: 1rem;
 }
 .quantity-controls button {
-    width: 38px; height: 38px; /* เพิ่มขนาด */
+    width: 38px; height: 38px;
     border-radius: 50%;
     background-color: var(--primary-color); color: white;
-    font-size: 2rem; /* เพิ่มขนาด */
+    font-size: 2rem;
     line-height: 1; padding: 0;
     display: flex; align-items: center; justify-content: center;
     border: none; cursor: pointer;
@@ -128,7 +129,7 @@ input[type="text"]:focus, input[type="tel"]:focus {
     border: 1px solid var(--primary-color);
 }
 .quantity-display {
-    font-size: 1.3rem; /* เพิ่มขนาด */
+    font-size: 1.3rem;
     font-weight: 700; min-width: 25px; text-align: center;
 }
 
@@ -144,18 +145,23 @@ input[type="text"]:focus, input[type="tel"]:focus {
 .sub-options-container span {
     display: inline-flex; align-items: center; justify-content: center;
     white-space: nowrap; 
-    padding: 0.4rem 0.8rem; /* เพิ่มขนาด */
+    padding: 0.4rem 0.8rem;
     border: 1px solid var(--border-color);
     border-radius: 15px; 
-    font-size: 0.9rem; /* เพิ่มขนาด */
+    font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 /* --- Floating Footer --- */
+/* **แก้ไข:** ให้ footer อยู่ใน container ที่มีความกว้างสูงสุด */
 .order-summary-footer {
     position: fixed;
-    bottom: 0; left: 0; right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px; /* ทำให้ความกว้างสัมพันธ์กับ .container */
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--surface-color);
     padding: 1rem;
     box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
@@ -163,10 +169,11 @@ input[type="text"]:focus, input[type="tel"]:focus {
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid var(--border-color);
+    box-sizing: border-box; /* เพิ่ม box-sizing เพื่อให้ padding ถูกต้อง */
 }
-.summary-details { color: var(--secondary-color); font-size: 1rem; } /* เพิ่มขนาด */
+.summary-details { color: var(--secondary-color); font-size: 1rem; }
 .summary-details .grand-total {
-    font-weight: 700; font-size: 1.2rem; color: var(--text-color); /* เพิ่มขนาด */
+    font-weight: 700; font-size: 1.2rem; color: var(--text-color);
 }
 #review-order-btn {
     width: auto;
@@ -177,7 +184,7 @@ input[type="text"]:focus, input[type="tel"]:focus {
     border-radius: 8px;
     font-weight: 700;
     cursor: pointer;
-    font-size: 1.1rem; /* เพิ่มขนาด */
+    font-size: 1.1rem;
 }
 #review-order-btn:disabled {
     background-color: #A0AEC0; cursor: not-allowed;
